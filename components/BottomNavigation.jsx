@@ -10,7 +10,7 @@ export default function BottomNavigatoin() {
     const path = usePathname()
 
     return (
-        <div className="h-[55px] flex items-center justify-evenly">
+        <div className="w-full flex items-center justify-evenly">
 
             <Link href="/">
                 <IconButton

@@ -1,5 +1,14 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+
+const konstaConfig = require('konsta/config');
+
+module.exports = konstaConfig({
+  konsta: {
+    colors: {
+      // "primary" is the main app color, if not specified will be default to '#007aff'
+      primary: '#ef4444'
+    }
+  },
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -15,4 +24,4 @@ module.exports = {
     },
   },
   plugins: [],
-}
+})

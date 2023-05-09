@@ -1,6 +1,7 @@
 import './globals.css'
 import SplashScreen from '@/components/SplashScreen'
 import BottomNavigatoin from '@/components/BottomNavigation'
+import KonstaWrapper from '@/components/KonstaWrapper'
 
 export const metadata = {
   title: 'Home',
@@ -10,15 +11,16 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
+          rel="stylesheet"
+        />
+      </head>
       <body>
-        <div className='w-screen h-screen grid grid-rows-[1fr_max-content]'>
-          {/* main */}
-          <SplashScreen>
-            {children}
-          </SplashScreen>
-
-          <BottomNavigatoin />
-        </div>
+        <KonstaWrapper>
+          {children}
+        </KonstaWrapper>
       </body>
     </html>
   )
