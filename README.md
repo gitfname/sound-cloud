@@ -1,5 +1,7 @@
 [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=gitfname_sound-cloud&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=gitfname_sound-cloud)
 
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=gitfname_sound-cloud&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=gitfname_sound-cloud)
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
