@@ -1,72 +1,179 @@
 "use client"
 
 import HorizontalStck from "@/components/HorizontalStack";
+import MusicCard_1 from "@/components/MusicCard_1";
 import { Page, Navbar, Block, Button, BlockTitle, List, ListItem,
 Actions, ActionsLabel, ActionsGroup, ActionsButton, Badge, Tabbar } from "konsta/react"
 import { useState } from "react";
 
 export default function Home() {
 
-  const [isOpen, setIsOpen] = useState(false)
-
   return (
-    <Page className="pb-[65px]">
-      <Navbar title="hello world" />
-      <Block>hello world</Block>
-      <Button onClick={() => setIsOpen(true)} className="touch-ripple-purple-500">hello world</Button>
-      <BlockTitle>Navigation</BlockTitle>
-      <List>
-        <ListItem
-          title="Home"
-          after={<Badge className="rounded-sm" colors={{bg: "bg-yellow-400", text: "text-slate-800"}}>901</Badge>}
-        />
-        <ListItem
-          title="Music"
-          after={<Badge colors={{bg:"bg-sky-600"}}>New</Badge>}
-        />
-      </List>
+    <Page className="pb-[65px] px-3 pt-5">
 
-      <div className="w-full border border-red-500 mt-64"></div>
-
-      <Actions
-        opened={isOpen}
-        onBackdropClick={() => setIsOpen(false)}
-        className="p-2"
-      >
-        <ActionsGroup>
-          <ActionsLabel>hello world</ActionsLabel>
-          <ActionsButton onClick={() => setIsOpen(false)}>
-            button-1
-          </ActionsButton>
-          <ActionsButton onClick={() => setIsOpen(false)}>
-            button-2
-          </ActionsButton>
-          <ActionsButton onClick={() => setIsOpen(false)}>
-            button-3
-          </ActionsButton>
-        </ActionsGroup>
-        <ActionsGroup className="pt-2 pb-2">
-          <ActionsButton onClick={() => setIsOpen(false)}>
-            cancel
-          </ActionsButton>
-        </ActionsGroup>
-      </Actions>
-
+      {/* hots now */}
       <HorizontalStck
+      titleCoolor="var(--primary-color)"
+        title="Hots now"
         items={[
-          1,2,3,4,5,6,7,8,9,10
+          {
+            title: "music-1",
+            subtitle: "hello world",
+            img: {
+              w: 160,
+              h: 160,
+              src: "/img1.jpg"
+            }
+          },
+          {
+            title: "music-2",
+            subtitle: "hello world",
+            img: {
+              w: 160,
+              h: 160,
+              src: "/img2.jpg"
+            }
+          },
+          {
+            title: "music-3",
+            subtitle: "hello world",
+            img: {
+              w: 160,
+              h: 160,
+              src: "/img3.jpg"
+            }
+          },
+          {
+            title: "music-4",
+            subtitle: "hello world",
+            img: {
+              w: 160,
+              h: 160,
+              src: "/img4.jpg"
+            }
+          },
+          {
+            title: "music-5",
+            subtitle: "hello world",
+            img: {
+              w: 160,
+              h: 160,
+              src: "/img5.jpg"
+            }
+          }
         ]}
-        renderer={(item) => <div className="w-32 h-20 bg-red-400">{item}</div>}
+        renderer={(item) => <MusicCard_1 {...item} /> }
+      />
+
+      {/* mood */}
+      <div className="mt-8"></div>
+      <HorizontalStck
+        titleClass="!text-xl"
+        title="Mood"
+        titleCoolor="black"
+        items={[
+          {
+            title: "music-1",
+            subtitle: "hello world",
+            img: {
+              w: 240,
+              h: 180,
+              src: "/img1.jpg",
+            }
+          },
+          {
+            title: "music-2",
+            subtitle: "hello world",
+            img: {
+              w: 240,
+              h: 180,
+              src: "/img2.jpg"
+            }
+          },
+          {
+            title: "music-3",
+            subtitle: "hello world",
+            img: {
+              w: 240,
+              h: 180,
+              src: "/img3.jpg"
+            }
+          },
+          {
+            title: "music-4",
+            subtitle: "hello world",
+            img: {
+              w: 240,
+              h: 180,
+              src: "/img4.jpg"
+            }
+          },
+          {
+            title: "music-5",
+            subtitle: "hello world",
+            img: {
+              w: 240,
+              h: 180,
+              src: "/img5.jpg"
+            }
+          }
+        ]}
+        renderer={(item) => <MusicCard_1 {...item} /> }
+      />
+
+
+      <div className="mt-8"></div>
+      {/* popular artists */}
+      <HorizontalStck
+        titleClass="!text-xl"
+        title="Popular artists"
+        titleCoolor="black"
+        items={[
+          {
+            subtitle: "hello world and all guys",
+            img: {
+              w: 105,
+              h: 105,
+              src: "/img1.jpg",
+            }
+          },
+          {
+            subtitle: "hello world",
+            img: {
+              w: 105,
+              h: 105,
+              src: "/img2.jpg"
+            }
+          },
+          {
+            subtitle: "hello world",
+            img: {
+              w: 105,
+              h: 105,
+              src: "/img3.jpg"
+            }
+          },
+          {
+            subtitle: "hello world",
+            img: {
+              w: 105,
+              h: 105,
+              src: "/img4.jpg"
+            }
+          },
+          {
+            subtitle: "music-5",
+            img: {
+              w: 105,
+              h: 105,
+              src: "/img5.jpg"
+            }
+          }
+        ]}
+        renderer={(item) => <MusicCard_1 detailsWrapperClass="!mt-1" showTitle={false} {...item} /> }
       />
 
     </Page>
-    // <div className="w-full">
-
-    //   <div className="w-full overflow-x-hidden border">
-    //     <HorizontalStck/>  
-    //   </div>
-
-    // </div>
   )
 
 }

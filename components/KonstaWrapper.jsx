@@ -7,7 +7,7 @@ export default function KonstaWrapper({children}) {
     return (
         <App safeAreas dark={false}>
             {children}
-            <Tabbar className="fixed bottom-0 left-0 bg-white h-[55px] grid place-items-center" bgClassName="bg-white">
+            <Tabbar className="fixed bottom-0 left-0 bg-white h-[55px] grid place-items-center" bgClassName="bg-gray-50">
                 <BottomNavigatoin />
             </Tabbar>
         </App>
